@@ -9,7 +9,7 @@
 :version: SVN: $Id: Resultdb.py 2338 2018-07-08 05:58:24Z zhangyi $
 """
 import time
-from cdspider.database.base import AuthorListRuleDB as BaseAuthorListRuleDB
+from cdspider_wemedia.database.base import AuthorListRuleDB as BaseAuthorListRuleDB
 from cdspider.database.mongo.Mongo import Mongo, SplitTableMixin
 
 class AuthorListRuleDB(Mongo, BaseAuthorListRuleDB, SplitTableMixin):

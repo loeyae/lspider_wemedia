@@ -9,8 +9,7 @@
 :version: SVN: $Id: Authordb.py 2116 2018-07-04 03:56:12Z zhangyi $
 """
 import time
-import pymongo
-from cdspider.database.base import AuthorDB as BaseAuthorDB
+from cdspider_wemedia.database.base import AuthorDB as BaseAuthorDB
 from cdspider.database.mongo.Mongo import Mongo
 
 class AuthorDB(Mongo, BaseAuthorDB):
