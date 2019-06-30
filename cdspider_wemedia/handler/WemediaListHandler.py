@@ -6,17 +6,11 @@
 :author:  Zhang Yi <loeyae@gmail.com>
 :date:    2018-12-11 11:10:18
 """
-import copy
 import time
-import traceback
 from cdspider.handler import GeneralHandler
-from urllib.parse import urljoin
 from cdspider.database.base import *
 from cdspider_wemedia.database.base import *
-from cdspider.libs import utils
 from cdspider.libs.constants import *
-from cdspider.parser import ListParser
-from cdspider.parser.lib import TimeParser
 
 class WemediaListHandler(GeneralHandler):
     """
