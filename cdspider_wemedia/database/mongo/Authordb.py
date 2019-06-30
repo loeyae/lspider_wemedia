@@ -123,12 +123,12 @@ class AuthorDB(Mongo, BaseAuthorDB):
         kwargs.setdefault('sort', [('uuid', 1)])
         return self.find(where=where, select=select, **kwargs)
 
-    def get_new_list(self, id, sid, where = {}, select=None, **kwargs):
+    def get_new_list(self, id, tid, where = {}, select=None, **kwargs):
         kwargs.setdefault('sort', [('uuid', 1)])
         if not where:
             where = {}
         where = self._build_where(where)
-        _where = {'$and':[{"uuid": {"$gt": id}}, {"sid": sid}]}
+        _where = {'$and':[{"uuid": {"$gt": id}}, {"tid": tid}]}
         for k, v in where.items():
             _where['$and'].extend([{k: v}])
         return self.find(where = _where, select=select, **kwargs)

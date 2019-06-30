@@ -18,6 +18,7 @@ setup(
     url="https://github.com/loeyae/lspider_wemedia.git",
     install_requires = [
         'cdspider>=0.1',
+        'cdspider_extra>=0.1',
     ],
     packages = find_packages(),
     entry_points = {
@@ -27,7 +28,6 @@ setup(
         ],
         'cdspider.dao.mongo': [
             'AuthorDB=cdspider_wemedia.database.mongo:AuthorDB',
-            'AuthorListRuleDB=cdspider_wemedia.database.mongo:AuthorListRuleDB',
         ]
     }
 )

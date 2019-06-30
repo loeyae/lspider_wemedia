@@ -12,18 +12,18 @@ from cdspider.database.base import Base
 
 {
     "author": {
-        "sid" : int,                    # site id,
+        "uuid" : int,                   # 自增id,
         "tid" : int,                    # task id,
         "name" : int,                   # name,
         "parameters" : {                # 参数
-            "hard" : [                  # 固定参数
+            "hard_code" : [                  # 固定参数
                 {
                     "mode" : str,       # 参数模式 get|post|format|replace
                     "name" : str,       # 参数键名
                     "value" : str,      # 参数值
                 }
             ],
-            "randoms" : [               # 随机参数
+            "random" : [               # 随机参数
                 {
                     "mode" : str,       # 参数模式 get|post|format|replace
                     "prefix" : str,     # 前缀
@@ -89,7 +89,7 @@ class AuthorDB(Base):
     def get_list(self, where = {}, select=None, **kwargs):
         raise NotImplementedError
 
-    def get_new_list(self, id, sid, where = {}, select=None, **kwargs):
+    def get_new_list(self, id, tid, where = {}, select=None, **kwargs):
         raise NotImplementedError
 
     def get_new_list_by_pid(self, id, pid, where = {}, select=None, **kwargs):
