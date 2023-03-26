@@ -1,2 +1,2 @@
 cdspider==0.1.4
-setuptools==40.6.2
+setuptools==65.5.1
